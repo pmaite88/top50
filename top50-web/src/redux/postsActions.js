@@ -1,5 +1,10 @@
 import axios from 'axios';
 
+export const dismissPosts = () => {
+  return { type: 'DISMISS_ALL_POSTS' };
+};
+
+
 export const postsRequest = () => {
   return { type: 'FETCH_POSTS_REQUEST' };
 };

@@ -14,7 +14,13 @@ const postsReducer = (state = initialState, action) => {
     case 'FETCH_POSTS_ERROR':
       return {
         ...state,
-        data: null, isLoading: false, error: action.payload
+        data: [], isLoading: false, error: action.payload
+      };
+
+    case 'DISMISS_ALL_POSTS':
+      return {
+        ...state,
+        data: [], isLoading: false, error: action.payload
       };
 
     default:
