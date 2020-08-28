@@ -4,6 +4,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import { dismissPosts, loadPosts } from '../../redux/postsActions';
 import Card from '../Card';
+import Button from '../Button';
 import './main.css';
 
 class Main extends React.Component {
@@ -24,12 +25,13 @@ class Main extends React.Component {
     return (
       <div bp="container">
         <div bp="grid">
-          <div bp="3"></div>
-          <div bp="6">
-              <div className="actions">
-                <button className="action" onClick={this.handleButton}>
-                  { this.props.data.length ? 'Dismiss All' : 'Load Posts' }
-                </button>
+          <div bp="2@sm 2@md 3@lg"></div>
+          <div bp="8@sm 8@md 6@lg">
+              <div className="posts-actions">
+                <Button
+                  action={this.handleButton}
+                  name={ this.props.data.length ? 'Dismiss All' : 'Load Posts' }
+                />
               </div>
 
               <ReactCSSTransitionGroup
@@ -47,7 +49,7 @@ class Main extends React.Component {
                   />)}
               </ReactCSSTransitionGroup>
              </div>
-          <div bp="3"></div>
+          <div bp="2@sm 2@md 3@lg"></div>
         </div>
       </div>
     )
