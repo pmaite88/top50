@@ -27,7 +27,7 @@ export const loadPosts = () => async dispatch => {
   dispatch(postsRequest());
 
   try {
-    const response = await axios.get('http://localhost:3000/api/v1/queries/top50');
+    const response = await axios.get(process.env.REACT_APP_TOP_50_URL);
 
     dispatch(postsRequestSuccess(response.data));
   } catch (error) {
