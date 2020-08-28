@@ -1,0 +1,54 @@
+.card {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+  background-color: snow;
+}
+
+.card:hover {
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.author {
+  font-weight: bold;
+}
+
+.comments {
+  font-weight: bold;
+}
+
+.date {
+  margin: 5px 0;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.metadata {
+  text-align: right;
+}
+
+.image-container {
+  display: flex;
+  padding: 20px;
+}
+
+.image {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 20px 24px;
+  margin: 0 -24px;
+  background-color: aliceblue;
+}
+
+.footer {
+  background-color: aliceblue;
+  margin: 0 -24px;
+}
